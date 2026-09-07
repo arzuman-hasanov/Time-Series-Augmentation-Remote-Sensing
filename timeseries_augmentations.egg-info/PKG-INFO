@@ -1,0 +1,16 @@
+Metadata-Version: 2.2
+Name: timeseries_augmentations
+Version: 0.1.0
+Summary: Data augmentation for time series processing
+Requires-Dist: torch>=2.1
+Requires-Dist: scikit-learn
+Requires-Dist: hydra-core>=1.3.2
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Provides-Extra: gpu
+Requires-Dist: pytorch-cuda>=12.1; extra == "gpu"
+Provides-Extra: full
+Requires-Dist: pytorch-cuda>=12.1; extra == "full"
+Requires-Dist: tensorboard; extra == "full"
+Requires-Dist: neptune>=1.13.0; extra == "full"
