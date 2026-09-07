@@ -1,0 +1,64 @@
+Used Configuration:
+augmentation: timewarping
+augmentations:
+  jittering:
+    _target_: timeseries_augmentations.aug.jittering.Jittering
+    sigma: 0.5
+  resizing:
+    _target_: timeseries_augmentations.aug.resizing.Resizing
+    magnitude: 0.3
+  tada:
+    _target_: timeseries_augmentations.aug.tada.TADA
+    win_length: 20
+    hop_length: 5
+    gamma: 0.9
+    phi_max: 1
+  scaling:
+    _target_: timeseries_augmentations.aug.scaling.Scaling
+    magnitude: 0.3
+  permutation:
+    _target_: timeseries_augmentations.aug.permutation.Permutation
+    n_segments: 5
+  rotation:
+    _target_: timeseries_augmentations.aug.rotation.Rotation
+    seed: 42
+  resampling:
+    _target_: ts_ssl.data.augmentations.ResamplingAugmentation
+    upsampling_factor: 2.0
+    subsequence_length_ratio: 0.25
+  flipping:
+    _target_: timeseries_augmentations.aug.flipping.Flipping
+    p: 0.5
+  windowwarping:
+    _target_: timeseries_augmentations.aug.windowwarping.WindowWarping
+    window_ratio: 0.16
+    scales:
+    - 0.5
+    - 1.0
+    - 2.0
+  windowslice:
+    _target_: timeseries_augmentations.aug.windowslice.WindowSlice
+    reduce_ratio: 0.85
+  selectivePhasePenturbation:
+    _target_: timeseries_augmentations.aug.selectivePhasePenturbation.selectivePhasePenturbation
+    win_length: 10
+    hop_length: 5
+    freq_range:
+    - 0.2
+    - 0.5
+    scale: 0.1
+  phaseMagnitudeAugmentation:
+    _target_: timeseries_augmentations.aug.phaseMagnitudeAugmentation.PhaseMagnitudeAugmentation
+    win_length: 10
+    hop_length: 5
+    freq_range:
+    - 0.2
+    - 0.5
+    scale: 0.1
+  timewarping:
+    _target_: timeseries_augmentations.aug.timewarping.TimeWarping
+    sigma: 0.1
+    knot: 4
+seed: 42
+
+Selected classes: [4, 6, 15, 16, 1]

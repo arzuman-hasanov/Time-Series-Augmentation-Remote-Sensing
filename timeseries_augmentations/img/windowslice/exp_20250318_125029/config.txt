@@ -1,0 +1,44 @@
+Used Configuration:
+augmentation: windowslice
+augmentations:
+  jittering:
+    _target_: timeseries_augmentations.aug.jittering.Jittering
+    sigma: 0.5
+  resizing:
+    _target_: timeseries_augmentations.aug.resizing.Resizing
+    magnitude: 0.3
+  tada:
+    _target_: timeseries_augmentations.aug.tada.TADA
+    win_length: 10
+    hop_length: 1
+    gamma: 0.1
+    phi_max: 0.5
+  scaling:
+    _target_: timeseries_augmentations.aug.scaling.Scaling
+    magnitude: 0.3
+  permutation:
+    _target_: timeseries_augmentations.aug.permutation.Permutation
+    n_segments: 5
+  rotation:
+    _target_: timeseries_augmentations.aug.rotation.Rotation
+    seed: 42
+  resampling:
+    _target_: ts_ssl.data.augmentations.ResamplingAugmentation
+    upsampling_factor: 2.0
+    subsequence_length_ratio: 0.25
+  flipping:
+    _target_: timeseries_augmentations.aug.flipping.Flipping
+    p: 0.5
+  windowwarping:
+    _target_: timeseries_augmentations.aug.windowwarping.WindowWarping
+    window_ratio: 0.16
+    scales:
+    - 0.5
+    - 1.0
+    - 2.0
+  windowslice:
+    _target_: timeseries_augmentations.aug.windowslice.WindowSlice
+    reduce_ratio: 0.7
+seed: 42
+
+Selected classes: [4, 6, 15, 16, 1]
