@@ -1,0 +1,7 @@
+Used Configuration:
+jittering:
+  _target_: timeseries_augmentations.aug.jittering.Jittering
+  sigma: 100
+seed: 42
+
+Selected classes: [4, 6, 15, 16, 1]

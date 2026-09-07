@@ -1,0 +1,12 @@
+Used Configuration:
+augmentation: jittering
+augmentations:
+  jittering:
+    _target_: timeseries_augmentations.aug.jittering.Jittering
+    sigma: 10
+  time_warping:
+    _target_: timeseries_augmentations.aug.TimeWarping
+    sigma: 0.2
+seed: 42
+
+Selected classes: [4, 6, 15, 16, 1]
