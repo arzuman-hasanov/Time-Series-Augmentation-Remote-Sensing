@@ -1,0 +1,12 @@
+Used Configuration:
+augmentation: resizing
+augmentations:
+  jittering:
+    _target_: timeseries_augmentations.aug.jittering.Jittering
+    sigma: 0.5
+  resizing:
+    _target_: timeseries_augmentations.aug.resizing.Resizing
+    magnitude: 0.3
+seed: 42
+
+Selected classes: [4, 6, 15, 16, 1]

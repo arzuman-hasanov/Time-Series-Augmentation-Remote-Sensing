@@ -1,0 +1,20 @@
+Used Configuration:
+augmentation: scaling
+augmentations:
+  jittering:
+    _target_: timeseries_augmentations.aug.jittering.Jittering
+    sigma: 0.5
+  resizing:
+    _target_: timeseries_augmentations.aug.resizing.Resizing
+    magnitude: 0.3
+  tada:
+    _target_: timeseries_augmentations.aug.tada.TADA
+    win_length: 10
+    hop_length: 5
+    gamma: 0.1
+  scaling:
+    _target_: timeseries_augmentations.aug.scaling.Scaling
+    sigma: 0.2
+seed: 42
+
+Selected classes: [4, 6, 15, 16, 1]
