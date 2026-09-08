@@ -1,3 +1,5 @@
+#Comparison of Time Series Augmentation Methods for Self-Supervised Contrastive Learning Applied to Remote Sensing Time Series
+
 # List of implemented methods
 | Method for Data Augmentation | Source |
 |-----------------------------|--------|
